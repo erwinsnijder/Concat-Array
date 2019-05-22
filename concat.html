@@ -40,6 +40,7 @@ console.log(huisdieren)
 console.log(alledieren)    
 
 function myFunction() {
+        document.getElementById("lijst").innerHTML = '';
   for (var x = 0; x < alledieren.length; x++) {  
     document.getElementById("lijst").innerHTML =
       document.getElementById("lijst").innerHTML + alledieren[x].naam + ": " + alledieren[x].dier + ", ";
