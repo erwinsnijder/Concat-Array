@@ -20,10 +20,22 @@ this.dier = dier;
 }   
 }    
 
+class vogel {
+
+constructor(naam,dier) {
+this.naam = naam;
+this.dier = dier;
+}   
+}
+
+
+let uil = new  vogel ('meneer uil', 'uil');
+let valk = new vogel('valkje', 'sperwer');
+
 let kat = new  huisdier ('bubbels', 'kat');
 let hond = new huisdier ('spot', 'hond');
 
-let beer = new beest ('baloe', 'beer');
+let beer = new   beest ('baloe', 'beer');
 let tijger = new beest ('kahn', 'tijger');
 
 let beesten = [];
@@ -33,11 +45,13 @@ beesten.push (beer, tijger);
 let huisdieren = [];
 huisdieren.push (kat, hond);
 
-let alledieren = huisdieren.concat(beesten);
+let vogels =[];
+vogels.push (uil, valk);
+let alledieren = huisdieren.concat(beesten, vogels);
 
 console.log(beesten)
 console.log(huisdieren)
-console.log(alledieren)    
+console.log(vogels)    
 
 function myFunction() {
         document.getElementById("lijst").innerHTML = '';
