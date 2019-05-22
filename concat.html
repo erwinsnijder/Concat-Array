@@ -88,9 +88,10 @@ function voer() {
   }
 }
 
-function klik() {
+function klik1() {
 let iets = new  beest ('iets', 'wat')
 beesten.push (iets);
+let alledieren = huisdieren.concat(beesten, vogels);
 console.clear()
 console.log(beesten)
 console.log(huisdieren)
@@ -106,7 +107,7 @@ console.log(vogels)
      <p id='lijst'></p>  
      <br>
      <button onclick="voer()">voeren</button> 
-     <button onclick="klik()">nieuw beest</button>
+     <button onclick="klik1()">nieuw beest</button>
      <br>
         <p id='voeren'></p>
 </body>
