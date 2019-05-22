@@ -87,6 +87,13 @@ function voer() {
       document.getElementById("voeren").innerHTML + alledieren[x].naam + " word gevoerd door " + alledieren[x].verzorger + ". ";
   }
 }
+
+function klik() {
+let iets = new  beest ('iets', 'wat')
+beesten.push (iets);
+
+}
+
                 </script>
     
         </head>
@@ -96,6 +103,7 @@ function voer() {
      <p id='lijst'></p>  
      <br>
      <button onclick="voer()">voeren</button> 
+     <button onclick="klik()">nieuw beest</button>
      <br>
         <p id='voeren'></p>
 </body>
