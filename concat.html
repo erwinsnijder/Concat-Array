@@ -1,0 +1,57 @@
+<!doctype html>
+
+<html lang="en">
+        <head>
+                <title>concat arrays</title>
+                <script>
+            class beest {
+
+             constructor(naam,dier) {
+            this.naam = naam;
+            this.dier = dier;
+             }   
+             }  
+                
+             class huisdier {
+
+constructor(naam,dier) {
+this.naam = naam;
+this.dier = dier;
+}   
+}    
+
+let kat = new  huisdier ('bubbels', 'kat');
+let hond = new huisdier ('spot', 'hond');
+
+let beer = new beest ('baloe', 'beer');
+let tijger = new beest ('kahn', 'tijger');
+
+let beesten = [];
+
+beesten.push (beer, tijger);
+
+let huisdieren = [];
+huisdieren.push (kat, hond);
+
+let alledieren = huisdieren.concat(beesten);
+
+console.log(beesten)
+console.log(huisdieren)
+console.log(alledieren)    
+
+function myFunction() {
+  for (var x = 0; x < alledieren.length; x++) {  
+    document.getElementById("lijst").innerHTML =
+      document.getElementById("lijst").innerHTML + alledieren[x].naam + ": " + alledieren[x].dier + ", ";
+
+  }
+} 
+                </script>
+    
+        </head>
+<body>
+        <button onclick="myFunction()">rapport</button>
+        <br>
+     <p id='lijst'></p>      
+</body>
+</html>
