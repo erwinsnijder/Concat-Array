@@ -2,41 +2,58 @@
 
 <html lang="en">
         <head>
-                <title>concat arrays</title>
+                <title>dierentuin in concat arrays</title>
                 <script>
+class verzorger {
+
+constructor(naam) {
+this.naam = naam;
+}   
+}
+
+let harry = new verzorger ('harry');
+let barry = new verzorger ('barry');
+
+let verzorgers = [];
+verzorgers.push (harry, barry);
+
+
             class beest {
 
-             constructor(naam,dier) {
+             constructor(naam,dier, verzorger) {
             this.naam = naam;
             this.dier = dier;
+            this.verzorger = verzorger;
              }   
              }  
                 
              class huisdier {
 
-constructor(naam,dier) {
+constructor(naam,dier, verzorger) {
 this.naam = naam;
 this.dier = dier;
+this.verzorger = verzorger;
 }   
 }    
 
 class vogel {
 
-constructor(naam,dier) {
+constructor(naam,dier, verzorger) {
 this.naam = naam;
 this.dier = dier;
+this.verzorger = verzorger;
 }   
 }
 
 
-let uil = new  vogel ('meneer uil', 'uil');
-let valk = new vogel('valkje', 'sperwer');
+let uil = new  vogel ('meneer uil', 'uil', harry);
+let valk = new vogel('valkje', 'sperwer', barry);
 
-let kat = new  huisdier ('bubbels', 'kat');
-let hond = new huisdier ('spot', 'hond');
+let kat = new  huisdier ('bubbels', 'kat', barry);
+let hond = new huisdier ('spot', 'hond', harry);
 
-let beer = new   beest ('baloe', 'beer');
-let tijger = new beest ('kahn', 'tijger');
+let beer = new   beest ('baloe', 'beer', harry);
+let tijger = new beest ('kahn', 'tijger',harry);
 
 let beesten = [];
 
@@ -61,12 +78,25 @@ function myFunction() {
 
   }
 } 
+console.log(verzorgers)
+
+function voer() {
+        document.getElementById("voeren").innerHTML = '';
+  for (var x = 0; x < alledieren.length; x++) {  
+    document.getElementById("voeren").innerHTML =
+      document.getElementById("voeren").innerHTML + alledieren[x].naam + " word gevoerd door " + alledieren[x].verzorger + ". ";
+  }
+}
                 </script>
     
         </head>
 <body>
         <button onclick="myFunction()">inventaris</button>
         <br>
-     <p id='lijst'></p>      
+     <p id='lijst'></p>  
+     <br>
+     <button onclick="voer()">voeren</button> 
+     <br>
+        <p id='voeren'></p>
 </body>
 </html>
