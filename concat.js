@@ -1,3 +1,6 @@
+var vissoort = ['orca','dolfijn','maanvis','kreeft','piranha','haai','Cichlidae','koi','siergarnaal','meerval'];
+var diersoort = [];
+var vogelsoort = [];
 class verzorger {
 
     constructor(naam) {
@@ -23,10 +26,8 @@ class verzorger {
                     
                  class vis {
     
-    constructor(naam,dier, verzorger) {
-    this.naam = naam;
-    this.dier = dier;
-    this.verzorger = verzorger;
+    constructor() {
+    this.naam = vissoort[Math.floor(Math.random() * vissoort.length)];
     }   
     }    
     
