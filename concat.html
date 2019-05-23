@@ -27,7 +27,7 @@ verzorgers.push (harry, barry);
              }   
              }  
                 
-             class huisdier {
+             class vis {
 
 constructor(naam,dier, verzorger) {
 this.naam = naam;
@@ -45,70 +45,85 @@ this.verzorger = verzorger;
 }   
 }
 
-
 let uil = new  vogel ('meneer uil', 'uil', harry);
 let valk = new vogel('valkje', 'sperwer', barry);
 
-let kat = new  huisdier ('bubbels', 'kat', barry);
-let hond = new huisdier ('spot', 'hond', harry);
+let dolfijn = new  vis ('bubbels', 'dolfijn', barry);
+let orca = new vis ('willy', 'orca', harry);
 
 let beer = new   beest ('baloe', 'beer', harry);
 let tijger = new beest ('kahn', 'tijger',harry);
 
 let beesten = [];
-
 beesten.push (beer, tijger);
 
-let huisdieren = [];
-huisdieren.push (kat, hond);
+let vissen = [];
+vissen.push (orca, dolfijn);
 
 let vogels =[];
 vogels.push (uil, valk);
-let alledieren = huisdieren.concat(beesten, vogels);
+
+let alledieren = vissen.concat(beesten, vogels);
 
 console.log(beesten)
-console.log(huisdieren)
-console.log(vogels)    
+console.log(vissen)
+console.log(vogels)
+console.log(alledieren)
+console.log(verzorgers)    
 
 function myFunction() {
-        document.getElementById("lijst").innerHTML = '';
-  for (var x = 0; x < alledieren.length; x++) {  
-    document.getElementById("lijst").innerHTML =
-      document.getElementById("lijst").innerHTML + alledieren[x].naam + ": " + alledieren[x].dier + ", ";
-
-  }
-} 
-console.log(verzorgers)
-
-function voer() {
-        document.getElementById("voeren").innerHTML = '';
-  for (var x = 0; x < alledieren.length; x++) {  
-    document.getElementById("voeren").innerHTML =
-      document.getElementById("voeren").innerHTML + alledieren[x].naam + " word gevoerd door " + alledieren[x].verzorger + ". ";
-  }
+document.getElementById("lijst").innerHTML = '';
+for (var x = 0; x < alledieren.length; x++) {  
+document.getElementById("lijst").innerHTML =
+document.getElementById("lijst").innerHTML + alledieren[x].naam + ": " + alledieren[x].dier + ", ";
 }
+} 
 
 function klik1() {
 let iets = new  beest ('iets', 'wat')
 beesten.push (iets);
-let alledieren = huisdieren.concat(beesten, vogels);
+let alledieren = vissen.concat(beesten, vogels);
 console.clear()
 console.log(beesten)
-console.log(huisdieren)
-console.log(vogels) 
+console.log(vissen)
+console.log(vogels)
+console.log(alledieren)
+console.log(verzorgers) 
 }
 
-                </script>
-    
+function klik2() {
+let iets = new  vogel ('iets', 'wat')
+vogels.push (iets);
+let alledieren = vissen.concat(beesten, vogels);
+console.clear()
+console.log(beesten)
+console.log(vissen)
+console.log(vogels)
+console.log(alledieren)
+console.log(verzorgers) 
+}
+
+function klik3() {
+let iets = new  vis ('iets', 'wat')
+vissen.push (iets);
+let alledieren = vissen.concat(beesten, vogels);
+console.clear()
+console.log(beesten)
+console.log(vissen)
+console.log(vogels)
+console.log(alledieren)
+console.log(verzorgers) 
+}
+        </script>
         </head>
 <body>
         <button onclick="myFunction()">inventaris</button>
         <br>
      <p id='lijst'></p>  
      <br>
-     <button onclick="voer()">voeren</button> 
-     <button onclick="klik1()">nieuw beest</button>
-     <br>
-        <p id='voeren'></p>
+     <button onclick="klik1()">bestel een beest</button>
+     <button onclick="klik2()">bestel een vogel</button>
+     <button onclick="klik3()">bestel een vis</button>
+     
 </body>
 </html>
