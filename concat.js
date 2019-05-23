@@ -1,28 +1,13 @@
 var vissoort = ['orca','dolfijn','maanvis','kreeft','piranha','haai','Cichlidae','koi','siergarnaal','meerval'];
 var diersoort = [];
 var vogelsoort = [];
-class verzorger {
-
-    constructor(naam) {
-    this.naam = naam;
-    }   
-    }
-    
-    let harry = new verzorger ('harry');
-    let barry = new verzorger ('barry');
-    
-    let verzorgers = [];
-    verzorgers.push (harry, barry);
-    
     
                 class beest {
     
-                 constructor(naam,dier, verzorger) {
-                this.naam = naam;
-                this.dier = dier;
-                this.verzorger = verzorger;
-                 }   
-                 }  
+                 constructor() {
+                this.naam = "soort";
+                }   
+                }  
                     
                  class vis {
     
@@ -33,21 +18,19 @@ class verzorger {
     
     class vogel {
     
-    constructor(naam,dier, verzorger) {
-    this.naam = naam;
-    this.dier = dier;
-    this.verzorger = verzorger;
+    constructor() {
+    this.naam = "soort";
     }   
     }
     
-    let uil = new  vogel ('meneer uil', 'uil', harry);
-    let valk = new vogel('valkje', 'sperwer', barry);
+    let uil = new  vogel ();
+    let valk = new vogel();
     
-    let dolfijn = new  vis ('bubbels', 'dolfijn', barry);
-    let orca = new vis ('willy', 'orca', harry);
+    let dolfijn = new  vis ();
+    let orca = new vis ();
     
-    let beer = new   beest ('baloe', 'beer', harry);
-    let tijger = new beest ('kahn', 'tijger',harry);
+    let beer = new   beest ();
+    let tijger = new beest ();
     
     var beesten = [];
     beesten.push (beer, tijger);
@@ -60,30 +43,22 @@ class verzorger {
     
     var alledieren = vissen.concat(beesten, vogels);
     
-    console.log(beesten)
-    console.log(vissen)
-    console.log(vogels)
-    console.log(alledieren)
-    console.log(verzorgers)    
-    
-    function myFunction() {
-    document.getElementById("lijst").innerHTML = '';
-    for (var x = 0; x < alledieren.length; x++) {  
-    document.getElementById("lijst").innerHTML =
-    document.getElementById("lijst").innerHTML + alledieren[x].naam + ": " + alledieren[x].dier + ", ";
-    }
-    } 
+    // console.log(beesten)
+    // console.log(vissen)
+    // console.log(vogels)
+    // console.log(alledieren)
+        
+     
     
     function klik1() {
     let iets = new  beest ('iets', 'wat')
     beesten.push (iets);
-   var alledieren = vissen.concat(beesten, vogels);
+    var alledieren = vissen.concat(beesten, vogels);
     console.clear()
     console.log(beesten)
     console.log(vissen)
     console.log(vogels)
     console.log(alledieren)
-    console.log(verzorgers) 
     }
     
     function klik2() {
@@ -94,8 +69,7 @@ class verzorger {
     console.log(beesten)
     console.log(vissen)
     console.log(vogels)
-    console.log(alledieren)
-    console.log(verzorgers) 
+    console.log(alledieren) 
     }
     
     function klik3() {
@@ -106,6 +80,14 @@ class verzorger {
     console.log(beesten)
     console.log(vissen)
     console.log(vogels)
-    console.log(alledieren)
-    console.log(verzorgers) 
+    console.log(alledieren) 
     }
+    
+    function myFunction() {
+        document.getElementById("lijst").innerHTML = '';
+        for (var x = 0; x < alledieren.length; x++) {  
+        console.log(alledieren)
+            document.getElementById("lijst").innerHTML =
+        document.getElementById("lijst").innerHTML + alledieren[x].naam + ": " + alledieren[x].dier + ", ";
+        }
+        }
